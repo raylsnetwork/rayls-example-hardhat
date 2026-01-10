@@ -15,6 +15,15 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
+    rayls_devnet: {
+      url: process.env.RPC_URL || "https://devnet-rpc.rayls.com",
+      chainId: 123123,
+      accounts: [
+        process.env.PRIVATE_KEY_OWNER!,
+        process.env.PRIVATE_KEY_USER_A!,
+        process.env.PRIVATE_KEY_USER_B!,
+      ].filter(Boolean) as string[],
+    },
     rayls: {
       url: "https://devnet-rpc.rayls.com",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
