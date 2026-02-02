@@ -1,0 +1,9 @@
+# Quando liberarem acesso ao Azure DevOps:
+
+cd C:\qa-challenge
+
+git clone https://dev.azure.com/parfin/PS/_git/vault-contract-poc
+
+cd vault-contract-poc
+
+npm install
